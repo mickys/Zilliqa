@@ -492,6 +492,12 @@ bool DirectoryService::ProcessFinalBlockConsensus(
         return false;
     }
 
+    if (!result)
+    {
+        return result; 
+    }
+
+
     ConsensusCommon::State state = m_consensusObject->GetState();
 
     if (state == ConsensusCommon::State::DONE)

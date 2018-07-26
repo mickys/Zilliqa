@@ -1206,9 +1206,6 @@ void Node::CallActOnFinalBlockBasedOnSenderForwarderAssgn(uint8_t shard_id)
     {
         vector<Peer> nodes_to_send;
 
-        LOG_EPOCH(INFO, to_string(m_mediator.m_currentEpochNum).c_str(),
-                  "iii amam herehere");
-
         // Give myself the list of all receiving nodes in all other committees including DS
         for (unsigned int i = 0; i < m_txnSharingAssignedNodes.at(0).size();
              i++)
