@@ -302,8 +302,9 @@ bool DirectoryService::RunConsensusOnShardingWhenDSPrimary()
     /**
     if (m_consensusMyID == 0 && m_viewChangeCounter < 1)
     {
-        LOG_GENERAL(INFO, "I am killing myself to test view change");
-        throw exception();
+        LOG_GENERAL(INFO, "I am killing/suspending myself to test view change");
+        // throw exception();
+        return false;
     }
     **/
     // Create new consensus object
